@@ -2,7 +2,9 @@
 import socket
 
 class Client(socket.socket):
-
+    '''
+    Client object used to connect to Server socket
+    '''
     DEFAULT_PACKET_SIZE = 1024
 
     def __init__(self, *args, **kwargs):
@@ -13,6 +15,13 @@ class Client(socket.socket):
         self.data = None
 
     def start(self):
+        '''
+        Starts the client socket
+        inputs
+            None
+        outputs
+            None
+        '''
         if not host or not port:
             print("[Error] - Host or port variable is empty")
 
